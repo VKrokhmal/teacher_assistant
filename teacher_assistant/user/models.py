@@ -9,6 +9,6 @@ class Teacher(models.Model):
 
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    teacher_info = models.ManyToManyField(
+    teachers = models.ManyToManyField(
         Teacher,
     )

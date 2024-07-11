@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block main %}
+
+    <h1>{% trans 'Welcome home page' %}</h1>
+{% endblock %}
+
+{% block menu %}
+    {% with active='home' %}
+    {{ block.super }}
+    {% endwith %}
+{% endblock %}
