@@ -5,11 +5,10 @@ from user.models import Student, Teacher
 
 @admin.register(Student)
 class Student(admin.ModelAdmin):
-    pass
-    # list_display = "user", "teacher_info"
+    list_display = ("user",)
+    # list_display_links = ("user",)
 
 
 @admin.register(Teacher)
 class Teacher(admin.ModelAdmin):
-    # pass
     list_display = "user", "payment_info"

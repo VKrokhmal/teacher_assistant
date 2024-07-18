@@ -9,6 +9,9 @@ class Teacher(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     payment_info = models.TextField(max_length=500, blank=True)
 
+    def __str__(self):
+        return f"Teacher: {self.user}"
+
 
 class Student(models.Model):
     class Meta:
@@ -20,5 +23,4 @@ class Student(models.Model):
     )
 
     def __str__(self):
-        return f"User: {self.user}"
-
+        return f"Student: {self.user}"
