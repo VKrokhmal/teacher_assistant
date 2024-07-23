@@ -18,8 +18,9 @@ class Student(models.Model):
         verbose_name = "Student"
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    teacher_info = models.ManyToManyField(
+    teachers = models.ManyToManyField(
         Teacher,
+        related_name="students",
     )
 
     def __str__(self):
