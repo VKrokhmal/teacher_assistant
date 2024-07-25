@@ -1,12 +1,8 @@
 {% extends 'base.html' %} {% block main %}
 <h1>Hello Teacher in user/index !</h1>
-<h2><strong>Total users: {{total}}</strong></h2>
+<h2><strong>User: {{user.username}}</strong></h2>
 <ul>
-  {% for i in user%}
-  <li>
-    <a href="{% url 'user:detail' pk=i.pk %}"> {{i}} </a>
-  </li>
-  {% endfor %}
+  {{ user.first_name }}
 </ul>
 {% endblock %} {% block menu %} {% with active='teachers' %} {{ block.super }}
 {% endwith %} {% endblock %}
